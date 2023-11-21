@@ -1,3 +1,5 @@
+/* MOBILE first */
+
 html{
     font-size: 62.5%;
 }
@@ -5,6 +7,8 @@ body{
     font-family: "Segoe UI" , Tehoma, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 1rem;
     padding: 1rem;
+    background-color: lightsalmon;
+    color: darkmagenta;
 }
 p,h1 {
     margin-block-end: 1rem;
@@ -15,3 +19,54 @@ p{
 h1{
     font-size: 2.4rem;
 }
+/* Märitellään näkymät näytön eri tiloille */
+
+.mobile {
+    background-color: darkmagenta;
+    color: lightpink;
+    padding: 1rem;
+    display: inline-block;
+    margin: -1rem 0rem 1rem -1rem;
+}
+.tablet {
+    background-color: blanchedalmond;
+    color: darkolivegreen;
+    padding: 1rem;
+    display: none;
+    margin: -1rem 0rem 1rem -1rem;
+}
+.dekstop {
+    background-color: darkgoldenrod;
+    color: lemonchiffon;
+    padding: 1rem;
+    display: none;
+    margin: -1rem 0rem 1rem -1rem;
+}
+
+/* Tablet-näkymän säännöt */
+@media only screen and (min-width: 426px) {
+    body {
+      background-color: darkolivegreen;
+      color: blanchedalmond;
+    }
+    .mobile {
+        display: none;
+    }
+    .tablet {
+        display: inline-block;
+    }
+  }
+
+  /* Dekstop näkymän säännöt */
+  @media only screen and (min-width: 769px) {
+    body {
+      background-color: lemonchiffon;
+      color: darkgoldenrod;
+    }
+    .tablet {
+        display: none;
+    }
+    .dekstop {
+        display: inline-block;
+    }
+  }
